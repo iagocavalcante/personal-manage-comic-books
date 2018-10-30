@@ -1,7 +1,7 @@
-import Api from './../../../service/Api'
-import { http } from './../../../service/helper'
+import Rest from '@/service/Rest'
+import { http } from '@/service/helper'
 
-export default class ComicBook extends Api {
+export default class ComicBook extends Rest {
   /**
    * @param {*} options
    */

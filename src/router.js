@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './views/Home.vue'
+import Home from './domains/Home.vue'
 import ComicBookService from './domains/comic-books/service/ComicBooks'
 
 Vue.use(Router)
@@ -15,7 +15,7 @@ export default new Router({
     {
       path: '/comic-book',
       name: 'comic-books',
-      props: route => ({
+      props: route => ({ //eslint-disable-line
         service: ComicBookService.build({})
       }),
       // route level code-splitting
