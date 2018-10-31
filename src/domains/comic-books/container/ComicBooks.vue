@@ -1,5 +1,6 @@
 <template>
   <vs-row>
+    <h1>TEste</h1>
     <vs-col vs-type="flex" vs-justify="center" vs-align="center" vs-w="6">
       <read-comic-book/>
     </vs-col>
@@ -10,8 +11,8 @@
 </template>
 
 <script>
-import ReadComicBook from '@/domains/comic-books/components/ReadComicBook'
-import ReadedComicBook from '@/domains/comic-books/components/ReadedComicBook'
+import ReadComicBook from './../components/ReadComicBook'
+import ReadedComicBook from './../components/ReadedComicBook'
 export default {
   components: {
     ReadComicBook,
@@ -21,6 +22,15 @@ export default {
     service: {
       required: true
     }
+  },
+  mounted () {
+    this.service.getall()
+      .then(data => {
+        console.log(data) //eslint-disable-line
+      })
+      .catch(error => {
+        console.log(error) //eslint-disable-line
+      })
   }
 }
 </script>
