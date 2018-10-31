@@ -6,6 +6,6 @@ export default class ComicBook extends Rest {
    * @param {*} options
    */
   constructor(options) {
-    super(options, '/api/v1/market/products')
+    super(options, '/comic-book')
   }
 }

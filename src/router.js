@@ -13,7 +13,7 @@ export default new Router({
       component: Home
     },
     {
-      path: '/comic-book',
+      path: '/comic-books',
       name: 'comic-books',
       props: route => ({ //eslint-disable-line
         service: ComicBookService.build({})

@@ -18,7 +18,7 @@ export default class Rest extends Service {
    * @param {Object} record
    */
   getAll() {
-    return promise.get('/comic-books')
+    return promise.get('/comic-book')
   }
 
   /**
