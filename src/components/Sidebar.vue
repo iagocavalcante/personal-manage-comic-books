@@ -17,10 +17,10 @@
         {{item.title}}
       </vs-sidebar-item>
 
-      <div class="footer-sidebar" slot="footer">
+      <!-- <div class="footer-sidebar" slot="footer">
         <vs-button icon="reply" color="danger" type="flat">log out</vs-button>
         <vs-button icon="settings" color="primary" type="border"></vs-button>
-      </div>
+      </div> -->
 
     </vs-sidebar>
   </div>
@@ -52,12 +52,6 @@ export default {
         index: '1',
         title: 'Comic Books',
         route: '/comic-books'
-      },
-      {
-        icon: 'gavel',
-        index: '2',
-        title: 'Books',
-        route: 'books'
       }
     ]
   }),

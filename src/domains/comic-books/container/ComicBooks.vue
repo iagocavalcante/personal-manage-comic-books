@@ -51,8 +51,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.header-comic {
+.header-comic
   padding 10px
-}
 </style>
 

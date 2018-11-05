@@ -25,7 +25,7 @@ export default class Rest extends Service {
    * @param {Object} record
    */
   create(record) {
-    return promise({ status: record })
+    return promise.post('/comic-book', record)
   }
 
   /**
