@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>To read comic books</h1>
+    <h1>Comic books to be read</h1>
     <vs-row vs-justify="center">
       <vs-col class="mr-20" type="flex" vs-justify="center" vs-align="center" vs-w="4" vs-lg="4" vs-sm="6" vs-xs="12" :key="comicBook.id" v-for="comicBook in comicBooks">
         <vs-card>
@@ -17,15 +17,22 @@
               <vs-col type="flex" vs-justify="center" vs-align="center" vs-w="12">
                 <h3>{{comicBook.saga}}</h3>
               </vs-col>
-              <vs-col type="flex" vs-justify="center" vs-align="center" vs-w="12">
+              <vs-col type="flex" vs-justify="flex-start" vs-align="flex-start" vs-w="12">
                 <p>{{comicBook.description}}</p>
+              </vs-col>
+              <vs-col type="flex" vs-justify="flex-start" vs-align="flex-start" vs-w="12">
+                <p>{{publisher(comicBook)}}</p> <!-- eslint-disable-line -->
+              </vs-col>
+              <vs-col type="flex" vs-justify="flex-start" vs-align="flex-start" vs-w="12">
+                <p>Published Date: {{comicBook.published_date}}</p> <!-- eslint-disable-line -->
               </vs-col>
             </vs-row>
           </div>
           <div slot="footer">
             <vs-row vs-justify="flex-end">
+              <vs-button class="mr-10" color="primary" icon="edit"></vs-button>
               <vs-button class="mr-10" color="danger" icon="favorite"></vs-button>
-              <vs-button class="mr-10" color="primary" icon="turned_in_not"></vs-button>
+              <vs-button color="success" :icon="comicBook.read ? 'turned_in' : 'turned_in_not'"></vs-button>
             </vs-row>
           </div>
         </vs-card>
@@ -41,6 +48,11 @@ export default {
     comicBooks: {
       type: Array,
       required: true
+    }
+  },
+  methods: {
+    publisher ( comicBook ) {
+      return (comicBook.publisher && comicBook.publisher.length > 0) ? comicBook.publisher[0].name : ''
     }
   }
 }
