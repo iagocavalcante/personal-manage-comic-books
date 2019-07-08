@@ -14,7 +14,7 @@
     "register-service-worker": "1.6.2",
     "vue": "2.6.10",
     "vue-router": "3.0.7",
-    "vuesax": "3.8.77"
+    "vuesax": "3.9.0"
   },
   "devDependencies": {
     "@babel/plugin-proposal-optional-chaining": "7.2.0",
