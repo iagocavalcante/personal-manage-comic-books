@@ -23,7 +23,7 @@
     "@vue/cli-plugin-pwa": "4.0.5",
     "@vue/cli-service": "4.0.5",
     "babel-plugin-transform-optional-chaining": "7.0.0-beta.3",
-    "eslint": "6.6.0",
+    "eslint": "6.7.0",
     "eslint-plugin-vue": "6.0.1",
     "stylus": "0.54.7",
     "stylus-loader": "3.0.2",
